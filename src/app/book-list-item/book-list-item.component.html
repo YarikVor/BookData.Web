@@ -1,0 +1,20 @@
+<div class="row m-0 p-1 border">
+  <div style="width: 100px; height: 100px; box-sizing: content-box" class="p-2 justify-content-center d-flex col-auto">
+    <img style="max-height:100px; max-width:100px" src="data:image/png;base64,{{entity.cover}}">
+  </div>
+  <div class="col d-flex flex-column">
+    <div class="mb-auto position-relative">
+      <span class="w-100 text-truncate fs-4 text position-absolute start-0">
+        {{entity.title}}
+      </span>
+      <span class="position-absolute end-0 top-0 bg-white">
+        <fa-icon class="btn btn-link" [icon]="faPencil" (click)="edit()"></fa-icon>
+        <fa-icon class="btn btn-link" [icon]="faEye" (click)="open()"></fa-icon>
+      </span>
+    </div>
+    <div class="w-100 row m-0 ">
+      <div class="col-6 p-0">Review: {{entity.reviewsNumber}}</div>
+      <div class="col-6 p-0">Rating: {{entity.rating}}</div>
+    </div>
+  </div>
+</div>

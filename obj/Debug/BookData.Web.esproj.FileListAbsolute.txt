@@ -1,0 +1,2 @@
+G:\Project\BookDataWeb\BookData.Web\obj\Debug\BookData.Web.esproj.SuggestedBindingRedirects.cache
+G:\Project\BookDataWeb\BookData.Web\obj\Debug\BookData.Web.esproj.CoreCompileInputs.cache

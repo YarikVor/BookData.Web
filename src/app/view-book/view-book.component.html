@@ -1,0 +1,36 @@
+<ng-template #content let-modal class="modal-dialog modal-xl">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Details</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="close()"></button>
+  </div>
+  <div class="modal-body d-flex" style="flex-direction: column;">
+    <div class="row">
+      <div class="col-auto">
+        <div style="width: 150px; height: 150px; box-sizing: content-box" class="p-2 justify-content-center d-flex col-auto">
+          <img style="max-height:140px; max-width:140px" src="data:image/png;base64,{{response.cover}}">
+
+
+        </div>
+        <div class="w-100 row m-0 ">
+          <div class="col-6 p-0">Review: {{response.reviewsNumber}}</div>
+          <div class="col-6 p-0">Rating: {{response.rating}}</div>
+        </div>
+      </div>
+      <div class="col">
+        <h5>{{response.title}}</h5>
+        <i>{{response.author}}, {{response.genre}}</i>
+        <div style="height: 200px" class="overflow-auto">
+          {{response.content}}
+        </div>
+      </div>
+    </div>
+    <hr class="hr" />
+    <div style="min-height: 200px" class="overflow-auto">
+      <app-review-list [elems]="response.reviews"></app-review-list>
+    </div>
+
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="close()">Close</button>
+  </div>
+</ng-template>

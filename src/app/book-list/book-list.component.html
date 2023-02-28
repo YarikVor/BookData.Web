@@ -1,0 +1,13 @@
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <button [class.active]="tabActive === 0"  class="nav-link" (click)="setTab(0)">All</button>
+  </li>
+  <li class="nav-item">
+    <button [class.active]="tabActive === 1" class="nav-link" (click)="setTab(1)" >Recommended</button>
+  </li>
+</ul>
+
+<div class="border border-gray border-top-0 p-2 m-0 overflow-auto">
+  <app-book-list-all class="g-2 row" *ngIf="tabActive === 0" ></app-book-list-all>
+  <app-book-list-recommended class="g-2 row" *ngIf="tabActive === 1" ></app-book-list-recommended>
+</div>
